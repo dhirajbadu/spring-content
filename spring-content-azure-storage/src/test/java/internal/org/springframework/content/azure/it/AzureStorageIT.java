@@ -54,6 +54,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import com.azure.core.http.rest.PagedIterable;
 import com.azure.storage.blob.BlobContainerClient;
+import com.azure.storage.blob.BlobServiceClient;
 import com.azure.storage.blob.BlobServiceClientBuilder;
 import com.azure.storage.blob.models.BlobItem;
 import com.github.paulcwarren.ginkgo4j.Ginkgo4jConfiguration;
@@ -473,6 +474,11 @@ public class AzureStorageIT {
         @Bean
         public BlobServiceClientBuilder blobServiceClientBuilder() {
             return builder;
+        }
+
+        @Bean
+        public BlobServiceClient blobServiceClient() {
+            return builder.buildClient();
         }
     }
 

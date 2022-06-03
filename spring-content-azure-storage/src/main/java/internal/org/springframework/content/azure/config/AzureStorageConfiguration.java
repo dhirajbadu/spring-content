@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.convert.converter.ConverterRegistry;
 
-import com.azure.spring.autoconfigure.storage.resource.AzureStorageProtocolResolver;
+import com.azure.spring.cloud.core.resource.AzureStorageBlobProtocolResolver;
 
 @Configuration
-@Import(AzureStorageProtocolResolver.class)
+@Import(AzureStorageBlobProtocolResolver.class)
 public class AzureStorageConfiguration {
 
 	@Autowired(required = false)

@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.versions.LockingAndVersioningProxyFactory;
 
-import com.azure.spring.autoconfigure.storage.resource.AzureStorageProtocolResolver;
+import com.azure.spring.cloud.core.resource.AzureStorageBlobProtocolResolver;
 import com.azure.storage.blob.BlobServiceClient;
 import com.azure.storage.blob.BlobServiceClientBuilder;
 
@@ -35,7 +35,7 @@ public class AzureStorageFactoryBean extends AbstractStoreFactoryBean {
 	private LockingAndVersioningProxyFactory versioning;
 
 	@Autowired
-	private AzureStorageProtocolResolver resolver;
+	private AzureStorageBlobProtocolResolver resolver;
 
 	@Autowired
 	public AzureStorageFactoryBean(ApplicationContext context, BlobServiceClientBuilder client, PlacementService storePlacementService) {
